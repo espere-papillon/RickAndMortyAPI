@@ -1,0 +1,56 @@
+.CharterList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.Container {
+    display: flex;
+    margin: 1.5rem;
+    flex-direction: column;
+    width: 50rem;
+    padding-bottom: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+    box-shadow: #959DA566 0 8px 24px;
+}
+
+.CharterInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.CharterPhoto {
+    width: 20rem;
+}
+
+.CommonInfo {
+    width: 21rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.EpisodeContainer {
+    margin-top: 1rem;
+}
+
+.EpisodeList {
+    margin: 0;
+    height: 10rem;
+    overflow-y: auto;
+}
+
+.ButtonShowEpisodes {
+    border: none;
+    background-color: transparent;
+    color: #1E90FFFF;
+    text-decoration: underline;
+    font-size: medium;
+    padding: 0;
+}
+
