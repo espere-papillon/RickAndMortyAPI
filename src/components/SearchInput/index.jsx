@@ -12,10 +12,16 @@ const SearchInput = ({ onSearch }) => {
     animateScroll.scrollToTop();
   }, [value, onSearch]);
 
+  const onKeyPressHandler = (e) => {
+    if (e.charCode === 13) {
+      onSubmit();
+    }
+  }
+
   return (
     <div className="SearchInput">
       <input value={value} onChange={onSearchChange} />
-      <Button onClick={onSubmit}>SUBMIT</Button>
+      <Button onClick={onSubmit} onKeyPress={onKeyPressHandler} >SUBMIT</Button>
     </div>
   );
 };
