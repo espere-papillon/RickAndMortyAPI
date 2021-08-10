@@ -11,22 +11,22 @@ export const useFetchContent = () => {
   const request = async (value, page, array, param = true) => {
     setLoading(true)
     try {
+      // New request or take the second portion of the previous request data
       if (param) {
         const res = await api.getCharacters(value, page)
         const json = await res.json()
         if (json.results) {
           setResult(json.results)
-          if (json.results.length > 10) {
-            setImgList([...array, ...(json.results.slice(0, 10))])
-          } else {
-            setImgList([...array, ...json.results])
-          }
+          const a = json.results.filter((el, i) => i < 10)
+          setImgList([...array, ...a])
           paramsSelection10.current = false
         } else {
           setError(json.error)
+          setImgList([])
         }
       } else {
-        setImgList([...array, ...(result.slice(10, 20))])
+        const a = result.filter((el, i) => i >= 10)
+        setImgList([...array, ...a])
         paramsSelection10.current = true
       }
     } catch (e) {
