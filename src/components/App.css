@@ -5,3 +5,7 @@
 .ButtonNext {
   margin-bottom: 2rem;
 }
+
+.Error {
+  color: #FF0000FF;
+}

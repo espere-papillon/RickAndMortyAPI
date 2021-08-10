@@ -16,6 +16,7 @@ const App = () => {
         <h1>Simple content list</h1>
         <ContentList content={content}/>
         {/* TODO: Put FetchMoreButton component here */}
+        {error && <h3 className="Error">{error}</h3>}
         {content.length !== 0 && <div className="ButtonNext"><Button disabled={error || loading}
                                                                      onClick={onSubmit}>NEXT</Button></div>}
       </div>
