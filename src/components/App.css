@@ -1,11 +1,11 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .ButtonNext {
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 .Error {
-  color: #FF0000FF;
+    color: #FF0000FF;
 }
