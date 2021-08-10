@@ -22,11 +22,16 @@ export const useFetchContent = () => {
           paramsSelection10.current = false
         } else {
           setError(json.error)
-          setImgList([])
+          setImgList(array)
         }
       } else {
         const a = result.filter((el, i) => i >= 10)
-        setImgList([...array, ...a])
+        if (a.length) {
+          setImgList([...array, ...a])
+        } else {
+          setError("There is no data anymore")
+          setImgList(array)
+        }
         paramsSelection10.current = true
       }
     } catch (e) {
