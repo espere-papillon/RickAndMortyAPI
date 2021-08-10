@@ -20,8 +20,8 @@ const SearchInput = ({ onSearch }) => {
 
   return (
     <div className="SearchInput">
-      <input value={value} onChange={onSearchChange} />
-      <Button onClick={onSubmit} onKeyPress={onKeyPressHandler} >SUBMIT</Button>
+      <input value={value} onChange={onSearchChange} onKeyPress={onKeyPressHandler} />
+      <Button onClick={onSubmit} >SUBMIT</Button>
     </div>
   );
 };
